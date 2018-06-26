@@ -1,3 +1,27 @@
+<style>
+    .offcanvas-collapse {
+    position: fixed;
+    top: 95px; /* Height of navbar */
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    //background-color: whitesmoke;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+    z-index:99;
+  }
+  .offcanvas-collapse.open {
+    left: 0;
+    visibility: visible;
+  }
+  .bigdrop {
+    background-color: whitesmoke;
+  }
+  </style>
 <div class="container ">
     <div class="row px-4 py-2 align-items-center">
         <!-- logo -->
@@ -7,8 +31,8 @@
         </div>
         <!-- quick nav -->
         <div class="col-3 float-right text-right">
-            <div class="dropdown">
-                <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="">
+                <button class="btn btn-secondary btn-lg" type="button" data-toggle="offcanvas">
                     <span class="fas fa-bars"></span>
                 </button>
             {%include bigdropdown.html %}
